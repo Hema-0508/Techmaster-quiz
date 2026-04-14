@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TechMaster Pro Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="main-container">
+
+    <div class="app">
+
+        <h1 class="title"> TechMaster Quiz</h1>
+
+        <!-- LOGIN SCREEN -->
+        <div id="login-screen" class="card">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Enter your name">
+            <button onclick="login()">Start Quiz</button>
+        </div>
+
+        <!-- LANGUAGE SCREEN -->
+        <div id="language-screen" class="card hidden">
+            <h2>Select Language</h2>
+            <div class="languages">
+                <button onclick="startQuiz('c')">C</button>
+                <button onclick="startQuiz('python')">Python</button>
+                <button onclick="startQuiz('java')">Java</button>
+                <button onclick="startQuiz('css')">CSS</button>
+                <button onclick="startQuiz('javascript')">JavaScript</button>
+            </div>
+        </div>
+
+        <!-- QUIZ SCREEN -->
+        <div id="quiz-screen" class="card hidden">
+            <div class="top-bar">
+                <div id="progress-bar"></div>
+                <div id="timer">15</div>
+            </div>
+
+            <h2 id="question"></h2>
+            <div id="options"></div>
+            <button onclick="nextQuestion()">Next</button>
+        </div>
+
+        <!-- RESULT SCREEN -->
+        <div id="result-screen" class="card hidden"></div>
+
+    </div>
+
+</div>
+
+<script src="questions.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
